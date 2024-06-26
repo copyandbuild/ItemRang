@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender
 class reload(private val plugin: RankItem) : CommandExecutor {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
         plugin.reloadConfig()
-        plugin.customItemCMD?.loadConfig() // customitemCMD Konfiguration neu laden
+        plugin.customItemCMD?.loadConfig()
         sender.sendMessage("§econfig.yml §7neugeladen...")
         return true
     }

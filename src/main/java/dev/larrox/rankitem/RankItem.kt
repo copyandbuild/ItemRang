@@ -18,12 +18,10 @@ class RankItem : JavaPlugin() {
     override fun onEnable() {
         saveDefaultConfig()
 
-        // Initialize and store the instance of customitemCMD in the class field
         customItemCMD = customitemCMD(this)
         getCommand("rankitem")?.setExecutor(customItemCMD)
         server.pluginManager.registerEvents(customItemCMD!!, this)
 
-        // Register reload command
         getCommand("reloadconfig")?.setExecutor(reload(this))
 
         val console = Bukkit.getConsoleSender()

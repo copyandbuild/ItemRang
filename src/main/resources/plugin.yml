@@ -1,0 +1,11 @@
+name: RankItem
+version: '${project.version}'
+main: dev.larrox.rankitem.RankItem
+api-version: '1.20'
+author: Larrox
+commands:
+  rankitem:
+    permission: rankitem.command
+    usage: /<command>
+  reloadconfig:
+    permission: rankitem.reload

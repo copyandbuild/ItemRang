@@ -1,0 +1,5 @@
+rankitem:
+  material: PAPER  # Material des Rang-Items (Beispiel: DIAMOND_SWORD für Diamantschwert)
+  name: "&6Rang-Item"     # Anzeigename des Rang-Items (mit Farbformatierung)
+  rank: VIP               # Name des Rangs, der bei dem Item und bei erhalten angezeit wird,
+  command: "lp user %player% parent set vip"  # Befehl, der bei Rechtsklick auf das Item ausgeführt wird

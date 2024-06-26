@@ -20,7 +20,7 @@ class customitemCMD(private val plugin: RankItem) : CommandExecutor, Listener {
     private val guiname = "§c§kmm §7RangItem §c§kmm"
     private var rankItem: ItemStack? = null
     private var rankName: String? = null
-    private var commandToExecute: String? = null // Variable for the command to execute
+    private var commandToExecute: String? = null
 
     init {
         loadConfig()
@@ -58,7 +58,7 @@ class customitemCMD(private val plugin: RankItem) : CommandExecutor, Listener {
 
     private fun ItemGUI(player: Player) {
         val gui = Bukkit.createInventory(null, 9, guiname)
-        rankItem?.let { gui.setItem(4, it) } // Set the item in the middle of the inventory if it's not null
+        rankItem?.let { gui.setItem(4, it) }
         player.openInventory(gui)
     }
 
@@ -78,7 +78,7 @@ class customitemCMD(private val plugin: RankItem) : CommandExecutor, Listener {
         if (view.title != guiname) return
 
         val player = event.whoClicked as? Player ?: return
-        event.isCancelled = false // Cancel the event to prevent taking items
+        event.isCancelled = false
         val currentItem = event.currentItem
         if (currentItem != null && currentItem.isSimilar(rankItem)) {
             player.spigot().sendMessage(
